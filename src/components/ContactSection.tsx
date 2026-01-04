@@ -32,7 +32,7 @@ const ContactSection = () => {
     {
       icon: Github,
       label: "GitHub",
-      href: "https://github.com/arjunr-cec",
+      href: "https://github.com/mearjunr",
     },
     {
       icon: Linkedin,
@@ -54,7 +54,8 @@ const ContactSection = () => {
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Feel free to reach out for collaborations, opportunities, or just a friendly chat
+            Feel free to reach out for collaborations, opportunities, or just a
+            friendly chat
           </p>
         </motion.div>
 
@@ -75,7 +76,9 @@ const ContactSection = () => {
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                       <item.icon className="w-6 h-6 text-primary" />
                     </div>
-                    <p className="text-sm text-muted-foreground mb-1">{item.label}</p>
+                    <p className="text-sm text-muted-foreground mb-1">
+                      {item.label}
+                    </p>
                     <p className="font-medium text-sm">{item.value}</p>
                   </a>
                 ) : (
@@ -83,7 +86,9 @@ const ContactSection = () => {
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                       <item.icon className="w-6 h-6 text-primary" />
                     </div>
-                    <p className="text-sm text-muted-foreground mb-1">{item.label}</p>
+                    <p className="text-sm text-muted-foreground mb-1">
+                      {item.label}
+                    </p>
                     <p className="font-medium text-sm">{item.value}</p>
                   </div>
                 )}
@@ -98,7 +103,9 @@ const ContactSection = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-center"
           >
-            <p className="text-muted-foreground mb-6">Connect with me on social media</p>
+            <p className="text-muted-foreground mb-6">
+              Connect with me on social media
+            </p>
             <div className="flex items-center justify-center gap-4">
               {socialLinks.map((link) => (
                 <motion.a

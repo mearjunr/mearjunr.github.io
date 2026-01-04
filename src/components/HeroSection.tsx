@@ -4,8 +4,12 @@ import profileImage from "@/assets/profile.jpg";
 
 const HeroSection = () => {
   const socialLinks = [
-    { icon: Github, href: "https://github.com/arjunr-cec", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com/in/arjun-r-404423213", label: "LinkedIn" },
+    { icon: Github, href: "https://github.com/mearjunr", label: "GitHub" },
+    {
+      icon: Linkedin,
+      href: "https://linkedin.com/in/arjun-r-404423213",
+      label: "LinkedIn",
+    },
     { icon: Mail, href: "mailto:arjunr.off@gmail.com", label: "Email" },
     { icon: Phone, href: "tel:+917025119367", label: "Phone" },
   ];
@@ -76,8 +80,9 @@ const HeroSection = () => {
               transition={{ delay: 0.5 }}
               className="text-muted-foreground max-w-xl mb-8 leading-relaxed"
             >
-              MCA graduate with expertise in full-stack development and data analytics. 
-              Passionate about building innovative solutions with modern technologies.
+              MCA graduate with expertise in full-stack development and data
+              analytics. Passionate about building innovative solutions with
+              modern technologies.
             </motion.p>
 
             <motion.div
