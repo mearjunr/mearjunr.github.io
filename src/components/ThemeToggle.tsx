@@ -16,13 +16,13 @@ const ThemeToggle = () => {
     >
       <motion.div
         initial={false}
-        animate={{ rotate: theme === "dark" ? 180 : 0 }}
+        animate={{ rotate: 0 }}
         transition={{ duration: 0.3 }}
       >
         {theme === "dark" ? (
-          <Moon className="w-5 h-5" />
-        ) : (
           <Sun className="w-5 h-5" />
+        ) : (
+          <Moon className="w-5 h-5" />
         )}
       </motion.div>
     </motion.button>
