@@ -9,6 +9,15 @@ const ProjectsSection = () => {
 
   const projects = [
     {
+      title: "Personal Finance Expense Tracker",
+      subtitle: "Finance Management Application [2025]",
+      description:
+        "Personal finance expense tracker for recording and monitoring daily expenses. Enable users to manage and track daily expenses effectively.",
+      tags: ["MongoDB", "Express", "React", "Node.js"],
+      icon: BarChart3,
+      highlight: null,
+    },
+    {
       title: "Store Connect",
       subtitle: "Geolocation-Based Shopping Platform",
       description:
