@@ -14,9 +14,9 @@ const SkillsSection = () => {
       skills: ["Java", "Python", "C", "C++", "JavaScript", "HTML", "CSS", "SQL"],
     },
     {
-      title: "Tools & Platforms",
+      title: "Tools & Frameworks",
       icon: Database,
-      skills: ["Power BI", "Tableau", "Excel", "GitHub", "XAMPP"],
+      skills: ["React", "Node.js", "MongoDB", "Express.js", "Power BI", "Tableau", "Excel", "GitHub", "XAMPP"],
     },
     {
       title: "Concepts",
