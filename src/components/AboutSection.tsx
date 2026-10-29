@@ -69,7 +69,7 @@ const AboutSection = () => {
             </p>
           </m.div>
 
-          <m.div variants={scaleIn} className="relative overflow-hidden rounded-xl border border-border min-h-[180px]">
+          <m.div variants={scaleIn} className="relative overflow-hidden rounded-xl border border-border aspect-square">
             <img
               src={profileImage}
               alt="Arjun R"
@@ -77,7 +77,7 @@ const AboutSection = () => {
               height={309}
               loading="lazy"
               decoding="async"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover object-top"
             />
             <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/80 to-transparent">
               <p className="font-mono text-xs text-white">Pathanamthitta, Kerala</p>
