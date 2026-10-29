@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Globe, MessageCircle } from "lucide-react";
@@ -17,7 +17,7 @@ const LanguagesSection = () => {
   return (
     <section id="languages" className="py-24 bg-secondary/30" ref={ref}>
       <div className="section-container">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
@@ -29,11 +29,11 @@ const LanguagesSection = () => {
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Multilingual communication skills for effective collaboration
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {languages.map((lang, index) => (
-            <motion.div
+            <m.div
               key={lang.name}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -48,14 +48,14 @@ const LanguagesSection = () => {
                 {lang.level}
               </span>
               <div className="mt-4 h-1.5 bg-secondary rounded-full overflow-hidden">
-                <motion.div
+                <m.div
                   initial={{ width: 0 }}
                   animate={isInView ? { width: `${lang.proficiency}%` } : {}}
                   transition={{ duration: 1, delay: 0.5 + index * 0.1 }}
                   className="h-full bg-primary rounded-full"
                 />
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

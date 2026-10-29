@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Briefcase, GraduationCap, Lightbulb, Target } from "lucide-react";
@@ -33,7 +33,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-24 relative" ref={ref}>
       <div className="section-container">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
@@ -45,10 +45,10 @@ const AboutSection = () => {
           <p className="text-muted-foreground max-w-2xl mx-auto">
             A passionate developer with a strong foundation in computer science and a keen interest in emerging technologies
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -61,9 +61,9 @@ const AboutSection = () => {
               a geolocation-based web platform and created interactive Power BI dashboards for 
               business insights.
             </p>
-          </motion.div>
+          </m.div>
 
-          <motion.div
+          <m.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
@@ -76,12 +76,12 @@ const AboutSection = () => {
               and blockchain/Web3 innovation, with a strong focus on continuous learning 
               and problem-solving.
             </p>
-          </motion.div>
+          </m.div>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {highlights.map((item, index) => (
-            <motion.div
+            <m.div
               key={item.title}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -93,7 +93,7 @@ const AboutSection = () => {
               </div>
               <h4 className="font-semibold mb-2">{item.title}</h4>
               <p className="text-sm text-muted-foreground">{item.description}</p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>
