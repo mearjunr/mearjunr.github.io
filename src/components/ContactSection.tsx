@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react";
@@ -44,7 +44,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-24" ref={ref}>
       <div className="section-container">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
@@ -57,12 +57,12 @@ const ContactSection = () => {
             Feel free to reach out for collaborations, opportunities, or just a
             friendly chat
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {contactInfo.map((item, index) => (
-              <motion.div
+              <m.div
                 key={item.label}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -92,12 +92,12 @@ const ContactSection = () => {
                     <p className="font-medium text-sm">{item.value}</p>
                   </div>
                 )}
-              </motion.div>
+              </m.div>
             ))}
           </div>
 
           {/* Social Links */}
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -108,7 +108,7 @@ const ContactSection = () => {
             </p>
             <div className="flex items-center justify-center gap-4">
               {socialLinks.map((link) => (
-                <motion.a
+                <m.a
                   key={link.label}
                   href={link.href}
                   target="_blank"
@@ -118,10 +118,10 @@ const ContactSection = () => {
                   aria-label={link.label}
                 >
                   <link.icon className="w-6 h-6" />
-                </motion.a>
+                </m.a>
               ))}
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

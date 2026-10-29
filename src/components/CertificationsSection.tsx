@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Award, CheckCircle } from "lucide-react";
@@ -38,7 +38,7 @@ const CertificationsSection = () => {
   return (
     <section id="certifications" className="py-24" ref={ref}>
       <div className="section-container">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
@@ -50,11 +50,11 @@ const CertificationsSection = () => {
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Professional certifications and achievements that validate my expertise
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {certifications.map((cert, index) => (
-            <motion.div
+            <m.div
               key={cert.name}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -71,7 +71,7 @@ const CertificationsSection = () => {
                 </div>
                 <CheckCircle className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

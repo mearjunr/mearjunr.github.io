@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, MapPin, BarChart3, Dumbbell } from "lucide-react";
@@ -49,7 +49,7 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-24" ref={ref}>
       <div className="section-container">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
@@ -61,11 +61,11 @@ const ProjectsSection = () => {
           <p className="text-muted-foreground max-w-2xl mx-auto">
             A showcase of my key projects demonstrating skills in web development and data analytics
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <motion.div
+            <m.div
               key={project.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -101,7 +101,7 @@ const ProjectsSection = () => {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

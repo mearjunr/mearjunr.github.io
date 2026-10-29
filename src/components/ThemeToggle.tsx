@@ -1,12 +1,12 @@
 import { Moon, Sun } from "lucide-react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useTheme } from "@/hooks/useTheme";
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <motion.button
+    <m.button
       onClick={toggleTheme}
       className="relative p-3 rounded-full bg-secondary border border-border/50 
                  hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
@@ -14,7 +14,7 @@ const ThemeToggle = () => {
       whileTap={{ scale: 0.95 }}
       aria-label="Toggle theme"
     >
-      <motion.div
+      <m.div
         initial={false}
         animate={{ rotate: 0 }}
         transition={{ duration: 0.3 }}
@@ -24,8 +24,8 @@ const ThemeToggle = () => {
         ) : (
           <Moon className="w-5 h-5" />
         )}
-      </motion.div>
-    </motion.button>
+      </m.div>
+    </m.button>
   );
 };
 

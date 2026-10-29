@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code, Database, Cloud, Users } from "lucide-react";
@@ -33,7 +33,7 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="py-24" ref={ref}>
       <div className="section-container">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
@@ -45,11 +45,11 @@ const SkillsSection = () => {
           <p className="text-muted-foreground max-w-2xl mx-auto">
             A diverse skill set spanning programming languages, tools, and soft skills
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {skillCategories.map((category, categoryIndex) => (
-            <motion.div
+            <m.div
               key={category.title}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -64,7 +64,7 @@ const SkillsSection = () => {
               </div>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, index) => (
-                  <motion.span
+                  <m.span
                     key={skill}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
@@ -72,10 +72,10 @@ const SkillsSection = () => {
                     className="skill-tag"
                   >
                     {skill}
-                  </motion.span>
+                  </m.span>
                 ))}
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

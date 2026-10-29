@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { GraduationCap } from "lucide-react";
@@ -37,7 +37,7 @@ const EducationSection = () => {
   return (
     <section id="education" className="py-24 bg-secondary/30" ref={ref}>
       <div className="section-container">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
@@ -49,7 +49,7 @@ const EducationSection = () => {
           <p className="text-muted-foreground max-w-2xl mx-auto">
             My academic journey and qualifications
           </p>
-        </motion.div>
+        </m.div>
 
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-3 mb-8 justify-center">
@@ -61,7 +61,7 @@ const EducationSection = () => {
 
           <div className="space-y-6">
             {education.map((edu, index) => (
-              <motion.div
+              <m.div
                 key={edu.degree}
                 initial={{ opacity: 0, x: -20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -79,7 +79,7 @@ const EducationSection = () => {
                   <p className="text-sm text-muted-foreground mb-1">{edu.institution}</p>
                   <p className="text-xs text-muted-foreground">{edu.period}</p>
                 </div>
-              </motion.div>
+              </m.div>
             ))}
           </div>
         </div>
