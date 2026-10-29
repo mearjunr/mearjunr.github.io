@@ -1,7 +1,7 @@
 import { m } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code, Database, Cloud, Users } from "lucide-react";
+import { Code, Database, Layers, Wrench } from "lucide-react";
 
 const SkillsSection = () => {
   const ref = useRef(null);
@@ -11,22 +11,22 @@ const SkillsSection = () => {
     {
       title: "Languages",
       icon: Code,
-      skills: ["Java", "Python", "C", "C++", "JavaScript", "HTML", "CSS", "SQL"],
+      skills: ["TypeScript", "JavaScript", "Python", "Java", "SQL", "C", "C++", "HTML", "CSS"],
     },
     {
-      title: "Tools & Frameworks",
+      title: "Frameworks & Libraries",
+      icon: Layers,
+      skills: ["Next.js", "React.js", "Node.js", "Express.js", "Tailwind CSS", "Framer Motion", "Auth.js", "PHP", "REST APIs"],
+    },
+    {
+      title: "Databases & BI",
       icon: Database,
-      skills: ["React", "Node.js", "MongoDB", "Express.js", "Power BI", "Tableau", "Excel", "GitHub", "XAMPP"],
+      skills: ["PostgreSQL", "Prisma ORM", "MongoDB", "MySQL", "Power BI", "Tableau", "Excel"],
     },
     {
-      title: "Concepts",
-      icon: Cloud,
-      skills: ["Web Development", "Cloud Computing", "Blockchain", "Data Science"],
-    },
-    {
-      title: "Soft Skills",
-      icon: Users,
-      skills: ["Analytical Thinking", "Problem-Solving", "Leadership", "Teamwork", "Emotional Intelligence"],
+      title: "Tools & Leadership",
+      icon: Wrench,
+      skills: ["Git", "GitHub", "Vercel", "Docker", "Vitest", "XAMPP", "Leading an Intern Team", "Mentoring", "Code Review"],
     },
   ];
 
@@ -43,7 +43,7 @@ const SkillsSection = () => {
             Technical <span className="gradient-text">Skills</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A diverse skill set spanning programming languages, tools, and soft skills
+            Languages, frameworks, databases and tools I use day to day
           </p>
         </m.div>
 
