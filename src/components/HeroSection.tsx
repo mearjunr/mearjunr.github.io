@@ -7,7 +7,7 @@ const HeroSection = () => {
     { icon: Github, href: "https://github.com/mearjunr", label: "GitHub" },
     {
       icon: Linkedin,
-      href: "https://linkedin.com/in/arjun-r-404423213",
+      href: "https://www.linkedin.com/in/mearjunr",
       label: "LinkedIn",
     },
     { icon: Mail, href: "mailto:arjunr.off@gmail.com", label: "Email" },
@@ -75,7 +75,7 @@ const HeroSection = () => {
               transition={{ delay: 0.4 }}
               className="text-xl sm:text-2xl text-muted-foreground font-medium mb-6"
             >
-              Software Developer
+              Software Developer at Snapshare AI
             </m.h2>
 
             <m.p
@@ -84,9 +84,9 @@ const HeroSection = () => {
               transition={{ delay: 0.5 }}
               className="text-muted-foreground max-w-xl mb-8 leading-relaxed"
             >
-              MCA graduate with expertise in full-stack development and data
-              analytics. Passionate about building innovative solutions with
-              modern technologies.
+              Building products with Next.js, React, TypeScript, Prisma and
+              PostgreSQL, and leading the company's internal HRMS with a team of
+              interns. MCA graduate, published in IJSER 2025.
             </m.p>
 
             <m.div

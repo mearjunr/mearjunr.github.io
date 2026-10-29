@@ -10,13 +10,13 @@ const EducationSection = () => {
   const education = [
     {
       degree: "Master of Computer Applications",
-      institution: "Kerala Technological University",
+      institution: "College of Engineering Chengannur",
       period: "2023 – 2025",
       grade: "CGPA: 8.12",
     },
     {
       degree: "Bachelor of Computer Applications",
-      institution: "University of Kerala",
+      institution: "College of Applied Science, Adoor",
       period: "2020 – 2023",
       grade: "CGPA: 7.6",
     },

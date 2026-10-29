@@ -33,6 +33,21 @@ const CertificationsSection = () => {
       issuer: "KKEM",
       icon: "🚀",
     },
+    {
+      name: "Next Gen Employability Program (MERN Stack)",
+      issuer: "Hands-on full-stack development",
+      icon: "💻",
+    },
+    {
+      name: "NSS Volunteer",
+      issuer: "2018 – 2023",
+      icon: "🤝",
+    },
+    {
+      name: "Utsav Event Coordinator",
+      issuer: "2024",
+      icon: "🎪",
+    },
   ];
 
   return (

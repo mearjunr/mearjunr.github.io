@@ -16,7 +16,7 @@ const AboutSection = () => {
     {
       icon: Briefcase,
       title: "Full-Stack Developer",
-      description: "Skilled in web development and data analytics",
+      description: "Building products with Next.js, React, TypeScript and PostgreSQL at Snapshare AI",
     },
     {
       icon: Target,
@@ -25,8 +25,8 @@ const AboutSection = () => {
     },
     {
       icon: Lightbulb,
-      title: "Innovation Focused",
-      description: "Passionate about blockchain/Web3 and emerging technologies",
+      title: "Guiding Interns",
+      description: "Plans tickets, reviews pull requests and owns database migrations for an intern team",
     },
   ];
 
@@ -43,7 +43,7 @@ const AboutSection = () => {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A passionate developer with a strong foundation in computer science and a keen interest in emerging technologies
+            A full-stack developer with a computer science foundation, building and shipping production software
           </p>
         </m.div>
 
@@ -56,10 +56,10 @@ const AboutSection = () => {
           >
             <h3 className="text-xl font-semibold mb-4">Who I Am</h3>
             <p className="text-muted-foreground leading-relaxed">
-              I am an MCA graduate with an 8.12 CGPA from College of Engineering Chengannur, 
-              skilled in full-stack development and data analytics. I have built and published 
-              a geolocation-based web platform and created interactive Power BI dashboards for 
-              business insights.
+              I am a full-stack developer at Znorm AI (Snapshare), where I joined as an
+              intern in January 2026 and moved to a full-time role in July 2026. I am an MCA
+              graduate (8.12 CGPA) from College of Engineering Chengannur, and I published
+              a geolocation-based web platform in IJSER in 2025.
             </p>
           </m.div>
 
@@ -71,10 +71,10 @@ const AboutSection = () => {
           >
             <h3 className="text-xl font-semibold mb-4">What I Do</h3>
             <p className="text-muted-foreground leading-relaxed">
-              I specialize in building modern web applications using technologies like 
-              JavaScript, Python, and Java. I'm passionate about technology, marketing, 
-              and blockchain/Web3 innovation, with a strong focus on continuous learning 
-              and problem-solving.
+              I work mainly with Next.js, React, TypeScript, Prisma and PostgreSQL across
+              product UI, a full website revamp and on-site event support. I am currently
+              leading development of the company's internal HRMS and guiding an intern team
+              through tickets, code reviews and releases.
             </p>
           </m.div>
         </div>
