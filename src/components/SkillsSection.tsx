@@ -2,6 +2,7 @@ import { m } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Code, Database, Layers, Wrench } from "lucide-react";
+import { fadeUp, scaleIn, staggerContainer } from "@/lib/motion";
 
 const SkillsSection = () => {
   const ref = useRef(null);
@@ -47,37 +48,41 @@ const SkillsSection = () => {
           </p>
         </m.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {skillCategories.map((category, categoryIndex) => (
-            <m.div
-              key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
-              className="glass-card p-6"
-            >
+        <m.div
+          variants={staggerContainer(0.12)}
+          initial="hidden"
+          animate={isInView ? "show" : "hidden"}
+          className="grid md:grid-cols-2 gap-6"
+        >
+          {skillCategories.map((category) => (
+            <m.div key={category.title} variants={fadeUp} className="glass-card p-6">
               <div className="flex items-center gap-3 mb-5">
                 <div className="p-2 rounded-lg bg-primary/10">
                   <category.icon className="w-5 h-5 text-primary" />
                 </div>
                 <h3 className="font-semibold text-lg">{category.title}</h3>
               </div>
-              <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill, index) => (
+              <m.div variants={staggerContainer(0.04)} className="flex flex-wrap gap-2">
+                {category.skills.map((skill) => (
                   <m.span
                     key={skill}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ delay: categoryIndex * 0.1 + index * 0.05 }}
-                    className="skill-tag"
+                    variants={scaleIn}
+                    className="skill-tag inline-flex items-center gap-2"
                   >
+                    <span
+                      className="flex h-5 w-5 items-center justify-center rounded-md text-[10px] font-bold text-primary-foreground"
+                      style={{ background: "var(--gradient-primary)" }}
+                      aria-hidden="true"
+                    >
+                      {skill.charAt(0)}
+                    </span>
                     {skill}
                   </m.span>
                 ))}
-              </div>
+              </m.div>
             </m.div>
           ))}
-        </div>
+        </m.div>
       </div>
     </section>
   );

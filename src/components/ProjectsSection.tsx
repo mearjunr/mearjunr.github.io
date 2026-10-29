@@ -2,6 +2,7 @@ import { m } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { ExternalLink, MapPin, BarChart3, Dumbbell } from "lucide-react";
+import { trackSpotlight } from "@/hooks/useSpotlight";
 
 const ProjectsSection = () => {
   const ref = useRef(null);
@@ -70,7 +71,8 @@ const ProjectsSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="glass-card p-6 group hover:-translate-y-2 transition-all duration-300 flex flex-col"
+              onMouseMove={trackSpotlight}
+              className="glass-card spotlight p-6 group hover:-translate-y-2 transition-all duration-300 flex flex-col"
             >
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
                 <project.icon className="w-6 h-6 text-primary" />

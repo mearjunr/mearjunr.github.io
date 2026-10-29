@@ -1,19 +1,25 @@
-import { m, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 import { Code2, Menu, X, FileDown } from "lucide-react";
+import { useActiveSection } from "@/hooks/useActiveSection";
+
+const navItems = [
+  { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
+  { label: "Education", href: "#education" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
+
+const sectionIds = navItems.map((item) => item.href.slice(1));
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const navItems = [
-    { label: "About", href: "#about" },
-    { label: "Experience", href: "#experience" },
-    { label: "Education", href: "#education" },
-    { label: "Skills", href: "#skills" },
-    { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" },
-  ];
+  const activeSection = useActiveSection(sectionIds);
+  const { scrollYProgress } = useScroll();
+  const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 24, mass: 0.2 });
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -24,6 +30,13 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  const linkClass = (href: string) =>
+    `font-mono text-sm transition-colors ${
+      activeSection === href.slice(1)
+        ? "text-primary"
+        : "text-muted-foreground hover:text-primary"
+    }`;
+
   return (
     <m.header
       initial={{ y: -100, opacity: 0 }}
@@ -31,15 +44,23 @@ const Header = () => {
       transition={{ duration: 0.5 }}
       className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50"
     >
+      <m.div
+        style={{ scaleX: progress }}
+        className="absolute top-0 left-0 right-0 h-0.5 origin-left"
+        aria-hidden="true"
+      >
+        <div className="h-full w-full" style={{ background: "var(--gradient-primary)" }} />
+      </m.div>
+
       <div className="section-container">
         <div className="flex items-center justify-between h-16">
-          <a 
-            href="#" 
+          <a
+            href="#"
             onClick={(e) => handleNavClick(e, "#")}
             className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
           >
             <Code2 className="w-6 h-6 text-primary" />
-            <span className="font-semibold text-lg">Arjun R</span>
+            <span className="font-display font-bold text-lg">arjun.r</span>
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -48,9 +69,10 @@ const Header = () => {
                 key={item.label}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                className={linkClass(item.href)}
+                aria-current={activeSection === item.href.slice(1) ? "true" : undefined}
               >
-                {item.label}
+                ~/{item.label.toLowerCase()}
               </a>
             ))}
           </nav>
@@ -92,7 +114,9 @@ const Header = () => {
                   key={item.label}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="px-4 py-3 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-secondary/50 rounded-lg transition-colors"
+                  className={`px-4 py-3 text-sm font-medium hover:bg-secondary/50 rounded-lg transition-colors ${
+                    activeSection === item.href.slice(1) ? "text-primary bg-secondary/50" : "text-muted-foreground hover:text-primary"
+                  }`}
                 >
                   {item.label}
                 </a>
